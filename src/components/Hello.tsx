@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 export default class Hello extends Component {
   state = {
     counter: 0,
-  }
+    joe: 'yo',
+  };
 
   increment() {
     this.setState({
-      counter: this.state.counter + 1
+      counter: this.state.counter + 1,
     });
   }
 
