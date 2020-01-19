@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import Links from '../api/links';
+import { Links, Link } from '../api/links';
 
-class Info extends Component {
+class Info extends React.Component<{
+  links: Link[];
+}> {
   render() {
     const links = this.props.links.map(
       link => this.makeLink(link)
@@ -16,7 +18,7 @@ class Info extends Component {
     );
   }
 
-  makeLink(link) {
+  makeLink(link: Link) {
     return (
       <li key={link._id}>
         <a href={link.url} target="_blank">{link.title}</a>
@@ -25,7 +27,7 @@ class Info extends Component {
   }
 }
 
-export default InfoContainer = withTracker(() => {
+export default withTracker(() => {
   return {
     links: Links.find().fetch(),
   };
