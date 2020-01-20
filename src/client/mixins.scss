@@ -1,0 +1,37 @@
+@mixin screen($size, $type: max, $pixels: $small) {
+  @if $size == 'xsmall' {
+    @media screen and ($type + -width: $xsmall) {
+      @content;
+    }
+  } @else if $size == 'small' {
+    @media screen and ($type + -width: $small) {
+      @content;
+    }
+  } @else if $size == 'med' {
+    @media screen and ($type + -width: $med) {
+      @content;
+    }
+  } @else if $size == 'large' {
+    @media screen and ($type + -width: $large) {
+      @content;
+    }
+  } @else if $size == 'wide' {
+    @media screen and ($type + -width: $wide) {
+      @content;
+    }
+  } @else if $size == 'xwide' {
+    @media screen and ($type + -width: $xwide) {
+      @content;
+    }
+  } @else if $size == 'hd' {
+    @media screen and ($type + -width: $hd) {
+      @content;
+    }
+  } @else if $size == 'custom' {
+    @media screen and ($type + -width: $pixels + px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
