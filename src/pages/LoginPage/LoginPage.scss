@@ -1,0 +1,11 @@
+.login-page {
+  align-self: center;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  form > * {
+    padding: 16px;
+  }
+}

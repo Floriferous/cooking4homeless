@@ -2,6 +2,10 @@ import * as React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import BookingPage from '../pages/BookingPage';
+import TutorialPage from '../pages/TutorialPage';
+import LoginPage from '../pages/LoginPage';
+import AccountPage from '../pages/AccountPage';
+import AdminPage from '../pages/AdminPage';
 
 const Router: React.FunctionComponent<{}> = () => {
   return (
@@ -12,6 +16,18 @@ const Router: React.FunctionComponent<{}> = () => {
         </Route>
         <Route path="/booking">
           <BookingPage />
+        </Route>
+        <Route path="/tutorial">
+          <TutorialPage />
+        </Route>
+        <Route path="/login">
+          <LoginPage />
+        </Route>
+        <Route path="/account">
+          <AccountPage />
+        </Route>
+        <Route path="/admin">
+          <AdminPage />
         </Route>
       </Switch>
     </BrowserRouter>

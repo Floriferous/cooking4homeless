@@ -1,0 +1,18 @@
+.tutorial-page {
+  background-color: #e74c3c;
+  padding: 40px;
+  color: white;
+  flex-grow:1;
+  text-align: center;
+
+  h1,h2,h3 {
+    color: white !important;
+  }
+
+  ul {
+    list-style: none;
+    li {
+      padding: 16px;
+    }
+  }
+}

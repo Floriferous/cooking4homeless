@@ -8,6 +8,13 @@ body {
   color: #888 !important;
 }
 
+html, body, #react-target {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  flex-grow: 1;
+}
+
 h1,h2,h3,h4,h5 {
   color: #444 !important;
 }

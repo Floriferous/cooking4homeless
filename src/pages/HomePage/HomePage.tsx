@@ -2,22 +2,34 @@ import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensilsAlt } from '@fortawesome/pro-duotone-svg-icons/faUtensilsAlt';
 import { faUserFriends } from '@fortawesome/pro-duotone-svg-icons/faUserFriends';
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 
 const HomePage: React.FunctionComponent = () => {
   return (
     <div className="home-page">
+      <nav
+        style={{ padding: 8, display: 'flex', justifyContent: 'space-between' }}
+      >
+        <span>Cooking for homeless</span>
+
+        <Link to="/login">
+          <Button>Login</Button>
+        </Link>
+      </nav>
       <header>
         <div className="blue"></div>
         <div className="card1">
-          <h1 className="display4">Cooking for the homeless</h1>
+          <h1 className="display4">Cooking for homeless</h1>
           <h2>
             Bookez un soir avec vos ami(e)s et faites à manger pour les
             sans-abris de Genève
           </h2>
-          <Button type="primary" size="large">
-            Je veux cuisiner!
-          </Button>
+          <Link to="/tutorial">
+            <Button type="primary" size="large">
+              Je veux cuisiner!
+            </Button>
+          </Link>
         </div>
       </header>
 
