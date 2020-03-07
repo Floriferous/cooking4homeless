@@ -9,13 +9,14 @@ export interface Slot {
   createdAt: Date;
   createdById: string;
   teamIds: string;
+  status: string;
 }
 
 export const Slots = new Mongo.Collection<Slot>('slots');
 
 Meteor.methods({
   insertSlot({ slot }) {
-    return Slots.insert(slot);
+    return Slots.insert({ ...slot, status: 'open' });
   },
   removeSlot({ _id }) {
     return Slots.remove(_id);

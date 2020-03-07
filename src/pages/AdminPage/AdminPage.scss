@@ -1,3 +1,12 @@
 .admin-page {
   padding: 32px;
+
+  form {
+    width: 100%;
+    max-width: 300px;
+
+    .ant-form-item-control {
+      width: 100%;
+    }
+  }
 }

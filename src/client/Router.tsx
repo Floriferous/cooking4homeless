@@ -6,6 +6,7 @@ import TutorialPage from '../pages/TutorialPage';
 import LoginPage from '../pages/LoginPage';
 import AccountPage from '../pages/AccountPage';
 import AdminPage from '../pages/AdminPage';
+import SlotPage from '../pages/SlotPage/SlotPage';
 
 const Router: React.FunctionComponent<{}> = () => {
   return (
@@ -28,6 +29,9 @@ const Router: React.FunctionComponent<{}> = () => {
         </Route>
         <Route path="/admin">
           <AdminPage />
+        </Route>
+        <Route path="/slots/:slotId">
+          <SlotPage />
         </Route>
       </Switch>
     </BrowserRouter>
